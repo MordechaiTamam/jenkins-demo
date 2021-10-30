@@ -7,6 +7,7 @@ RUN tar xzf Python-3.9.6.tgz
 WORKDIR Python-3.9.6
 RUN ./configure --enable-optimizations
 RUN make altinstall
+RUN pip3.9 install selenium
 
 # install google chrome
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
