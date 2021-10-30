@@ -1,5 +1,5 @@
 # jenkins-demo
-* Prepare and run: <br>
+* Prepare and run: <br/>
 <code>
 cd jenkins-demo <br>
 docker-compose build <br>
