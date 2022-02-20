@@ -4,7 +4,7 @@ pipeline {
         stage('list files') {
             agent {
                 docker {
-                    dockerfile true
+                    image "moditamam/selenium:python3"
                     reuseNode true
                 }
             }
