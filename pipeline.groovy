@@ -9,7 +9,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'python3.9 selenium_simple.py'
+                sh 'python3 selenium_simple.py'
             }
         }
     }
