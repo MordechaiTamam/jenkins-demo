@@ -1,10 +1,13 @@
 pipeline {
-    agent {
-        dockerfile true
-        label 'agent_1'
-        }
+    agent { label 'agent_1' }
     stages {
         stage('list files') {
+            agent {
+                docker {
+                    image "moditamam/selenium:python3"
+                    reuseNode true
+                }
+            }
             steps {
                 sh 'python3 selenium_simple.py'
             }
