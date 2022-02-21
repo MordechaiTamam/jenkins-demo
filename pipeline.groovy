@@ -4,8 +4,8 @@ pipeline {
         stage('Build docker image'){
             steps{
                 sh 'docker build -t moditamam/selenium:from-jenkins-pipeline .'
-                sh 'docker push moditamam/selenium:from-jenkins-pipeline'
                 sh 'docker login'
+                sh 'docker push moditamam/selenium:from-jenkins-pipeline'
                 sh 'docker rmi moditamam/selenium:from-jenkins-pipeline'
             }
         }
